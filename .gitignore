@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+# Node.js
+node_modules/
+# Local Promptfoo state
+.promptfoo/
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Temporary files
+*.log
+*.tmp
+# Editor
+.vscode/
+.idea/
+
+# Local development backups
+provider_before_phase4.py

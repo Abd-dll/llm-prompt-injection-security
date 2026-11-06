@@ -1,0 +1,25 @@
+
+description: LLM Prompt Injection Security Assessment
+
+prompts:
+  - "{{document}}"
+
+providers:
+  - id: file://provider.py
+    label: Baseline
+    config:
+      mode: baseline
+
+  - id: file://provider.py
+    label: Prompt Hardening
+    config:
+      mode: hardened
+
+  - id: file://provider.py
+    label: Output Filter
+    config:
+      mode: output_filter
+
+tests:
+  - file://tests/legitimate.yaml
+  - file://tests/attacks.yaml

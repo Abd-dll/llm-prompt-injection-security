@@ -1,0 +1,5 @@
+{
+  "policy_id": "synthetic-backup-policy-v1",
+  "backup_frequency": "daily",
+  "retention_days": 30
+}

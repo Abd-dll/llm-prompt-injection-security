@@ -1,0 +1,28 @@
+description: Backup policy summarizer - trusted facts validation comparison
+
+prompts:
+  - "{{document}}"
+
+providers:
+  - id: file://provider.py
+    label: Baseline
+    config:
+      mode: baseline
+
+  - id: file://provider.py
+    label: Prompt Hardening
+    config:
+      mode: hardened
+
+  - id: file://provider.py
+    label: Output Filter
+    config:
+      mode: output_filter
+
+  - id: file://provider.py
+    label: Trusted Facts Validation
+    config:
+      mode: trusted_facts
+
+tests:
+  - file://tests/policy_cases.yaml
