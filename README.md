@@ -60,10 +60,7 @@ docs/
   threat-model.md
   findings.md
   validator-limitations.md    # Known limitations; see existing Phase 5 notes
-results/                      # Selected local evaluation exports (review before committing)
-```
-
-The names above describe the target repository layout; preserve the original project source files rather than replacing them with this documentation package.
+results/  # Reviewed experimental evaluation exports```
 
 ## Prerequisites
 
@@ -97,6 +94,23 @@ npx.cmd --yes promptfoo@0.125.1 view
 ```
 
 The flags `--no-cache` and `--max-concurrency 1` request a new evaluation and one scenario at a time. LLM outputs can still vary; results should be described per run, not as universal failure rates.
+
+
+### Historical evaluation note
+
+The initial 45-case evaluation was performed before custom Python
+assertions were introduced.
+
+Some assertions were subsequently updated in the current test suite.
+Therefore, rerunning the current configuration may produce different
+PASS/FAIL counts from the archived initial evaluation.
+
+The original results are preserved in
+`results/phase2-baseline.json`.
+
+The evaluation artifacts document the observed historical results,
+while the current configuration represents the latest implementation.
+
 
 ## Results observed
 
